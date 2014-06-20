@@ -1,0 +1,19 @@
+<div class="container-fluid">
+  <div class="row-fluid">
+    <div class="span10">
+      <!--Body content-->
+
+      <ul class="phones">
+      	TBD: detail view for: {{selPhoneId}}
+        <li ng-repeat="phone in phones | filter:selPhoneId">    
+          <!-- <a href="#/phones/{{phone.id}}" class="thumb"><img ng-src="{{phone.imageUrl}}"></a> -->
+          
+          <p ng-click="setClick(phone.snippet)">{{phone.name}}</p>
+          <p>{{phone.id}}</p>
+          <p>{{phone.age | checkmark}}</p>
+        </li>
+      </ul>
+
+    </div>
+  </div>
+</div>
