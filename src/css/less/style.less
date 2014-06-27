@@ -1,7 +1,39 @@
 
-@color: #4D926F;
-@font_size: 20px;
+@body_color: #F7F7F7;
+@body_font_size: 20px;
+@body_height:1024px;
+
+
+@header_color: #03AEE4;
+@header_font_size: 35px;
+@header_height:15%;
+
+@article_height:75%;
+@article_padding:5px;
+
+@footer_color: #64686D;
+@footer_font_size: 10px;
+@footer_height:10%;
+
+
+.basic_style(@bgcolor:white, @fontsize:12px){
+	background-color: @bgcolor;
+	font-size: @fontsize;
+}
+
 body{
-	background-color: @color;
-	font-size: @font_size;
+	.basic_style(@body_color, @body_font_size);
+	height: @body_height;
+}
+header{
+	.basic_style(@header_color, @header_font_size);
+	height: @header_height;
+}
+article{
+	height: @article_height;
+	padding: @article_padding;
+}
+footer{
+	.basic_style(@footer_color, @footer_font_size);
+	height: @footer_height;
 }
